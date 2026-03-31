@@ -1,0 +1,57 @@
+baseURL = "/"
+title = "ProdMCP-org"
+
+[module]
+  [[module.imports]]
+    path = "github.com/google/docsy"
+  [[module.imports]]
+    path = "github.com/google/docsy/dependencies"
+
+# Navigation
+[menu]
+  [[menu.main]]
+    name = "Docs"
+    weight = 10
+    url = "/docs/"
+  [[menu.main]]
+    name = "OpenMCP Spec"
+    weight = 20
+    url = "/docs/openmcp-spec/"
+  [[menu.main]]
+    name = "MCPcrunch"
+    weight = 30
+    url = "/docs/mcpcrunch/"
+  [[menu.main]]
+    name = "ProdMCP"
+    weight = 40
+    url = "/docs/prodmcp/"
+  [[menu.main]]
+    name = "Tutorials"
+    weight = 45
+    url = "/docs/tutorials/"
+  [[menu.main]]
+    name = "GitHub"
+    weight = 50
+    url = "https://github.com/prodmcp"
+    [menu.main.params]
+      external = true
+
+[params]
+  copyright = "ProdMCP-org"
+  github_repo = "https://github.com/prodmcp"
+  description = "Production-grade tooling for the MCP ecosystem — specification, validation, and framework."
+
+  [params.ui]
+
+    sidebar_menu_compact = false
+    ul_show = 1
+    sidebar_menu_foldable = true
+    navbar_logo = false
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[build]
+  writeStats = true

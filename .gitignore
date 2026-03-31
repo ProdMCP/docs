@@ -1,0 +1,22 @@
+# Hugo build artifacts
+public/
+resources/_gen/
+.hugo_build.lock
+hugo_stats.json
+
+# Hugo modules (managed by go.mod)
+themes/
+
+# Node
+node_modules/
+package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
