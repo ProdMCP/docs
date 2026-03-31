@@ -98,13 +98,64 @@ Your markdown content here.
 
 ## Deployment
 
-Build the production site:
+The site is deployed automatically to [Azure Static Web Apps](https://azure.microsoft.com/en-us/products/app-service/static) via GitHub Actions on every push to `main`. The production site is available at **https://prodmcp.org**.
+
+### CI/CD Pipeline
+
+The workflow (`.github/workflows/deploy.yml`) runs on every push to `main` and on pull requests:
+
+- **Push to `main`** → builds Hugo and deploys to production
+- **Pull requests** → creates a staging preview environment
+- **PR closed** → automatically cleans up the staging environment
+
+### Initial Azure Setup
+
+1. **Create an Azure Static Web App** in the [Azure Portal](https://portal.azure.com):
+   - Click **Create a resource** → search **Static Web App** → **Create**
+   - Select your subscription and resource group
+   - Name: `prodmcp-docs`
+   - Plan: **Free**
+   - Deployment source: **GitHub** → authorize and select `ProdMCP/docs` repo
+   - Branch: `main`
+   - Build preset: **Custom**
+   - App location: `public`
+   - Skip the auto-generated workflow (we have our own)
+
+2. **Get the deployment token** from Azure Portal:
+   - Go to your Static Web App → **Manage deployment token**
+   - Copy the token
+
+3. **Add the token as a GitHub secret**:
+   - Go to `github.com/ProdMCP/docs` → **Settings** → **Secrets and variables** → **Actions**
+   - Create secret: `AZURE_STATIC_WEB_APPS_API_TOKEN` with the token value
+
+### Custom Domain (prodmcp.org via GoDaddy)
+
+1. **In Azure Portal** → your Static Web App → **Custom domains** → **Add**:
+   - Add `prodmcp.org` (root domain)
+   - Add `www.prodmcp.org` (subdomain)
+
+2. **In GoDaddy DNS settings** for `prodmcp.org`, add these records:
+
+   | Type | Name | Value | TTL |
+   |------|------|-------|-----|
+   | `CNAME` | `www` | `<your-app>.azurestaticapps.net` | 1 Hour |
+   | `A` | `@` | *(IP from Azure validation)* | 1 Hour |
+   | `TXT` | `@` | *(validation token from Azure)* | 1 Hour |
+
+   > **Note:** The exact CNAME value and TXT validation token are provided by Azure when you add the custom domain. Azure will auto-provision a free SSL certificate once DNS propagates.
+
+3. **Verify** in Azure Portal — once DNS propagates (usually < 30 min), the domain status will show ✅ and SSL will be provisioned automatically.
+
+### Manual Build
+
+To build the production site locally:
 
 ```bash
 make build
 ```
 
-The static site is output to `./public` and can be deployed to any static hosting provider (GitHub Pages, Netlify, Vercel, Cloudflare Pages, etc.).
+The static output in `./public` can also be deployed manually to any hosting provider.
 
 ## Contributing
 
