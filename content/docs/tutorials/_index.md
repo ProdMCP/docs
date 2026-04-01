@@ -1,6 +1,6 @@
 ---
-title: "Master Course: 7 Days to Production MCP"
-linkTitle: "Master Course"
+title: "7 Day Tutorial: From Zero to Production MCP"
+linkTitle: "7 Day Tutorial"
 weight: 1
 description: >
   A comprehensive, day-wise curriculum to master the MCP ecosystem. Build, secure, and deploy production-grade unified servers in one week.

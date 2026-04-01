@@ -9,7 +9,7 @@ The unified documentation site for the **ProdMCP** open-source ecosystem — bui
 | [OpenMCP Specification](content/docs/openmcp-spec/) | The open standard for describing MCP servers — OpenAPI for MCP |
 | [MCPcrunch](content/docs/mcpcrunch/) | Security & structural validation for OpenMCP specs |
 | [ProdMCP Framework](content/docs/prodmcp/) | FastAPI-like production framework for MCP servers |
-| [Master Course](content/docs/tutorials/) | 7-day curriculum from foundations to production deployment |
+| [7 Day Tutorial](content/docs/tutorials/) | 7-day curriculum from foundations to production deployment |
 
 ## Prerequisites
 

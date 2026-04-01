@@ -53,7 +53,7 @@ type: "landing"
         <div class="project-card__logo-wrapper">
           <span class="project-card__icon">🎓</span>
         </div>
-        <h2 class="project-card__title">Master Course</h2>
+        <h2 class="project-card__title">7 Day Tutorial</h2>
         <p class="project-card__tagline">
           <b>7 Days to Production MCP.</b> A comprehensive Python-based curriculum 
           from foundations to high-availability deployment.

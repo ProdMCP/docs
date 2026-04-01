@@ -42,7 +42,7 @@ FastAPI-like production framework for building MCP servers.
 
 <div style="border: 1px solid #e0e0e0; border-radius: 12px; padding: 1.5rem; text-align: center; border-color: #f9ca24;">
 
-### 🎓 [Master Course](tutorials/)
+### 🎓 [7 Day Tutorial](tutorials/)
 
 **7 Days to Production MCP.** A comprehensive Python-based curriculum.
 
