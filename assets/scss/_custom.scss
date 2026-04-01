@@ -301,6 +301,25 @@
   gap: 0.8rem;
 }
 
+.project-card__pip {
+  display: inline-block;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.78rem;
+  color: var(--color-accent-light);
+  background: rgba(0, 206, 201, 0.1);
+  border: 1px solid rgba(0, 206, 201, 0.2);
+  border-radius: 6px;
+  padding: 0.3rem 0.8rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.project-card--prodmcp .project-card__pip {
+  color: #ff7979;
+  background: rgba(235, 77, 75, 0.1);
+  border-color: rgba(235, 77, 75, 0.2);
+}
+
 .project-card__cta::after {
   content: '→';
   transition: var(--transition-smooth);

@@ -14,6 +14,18 @@ type: "landing"
       from specification to validation to framework. Ship MCP servers with confidence.
     </p>
     <div class="projects-grid">
+      <a href="/docs/prodmcp/" class="project-card project-card--prodmcp" id="card-prodmcp">
+        <div class="project-card__logo-wrapper">
+          <img src="/images/prodmcp-logo.png" alt="ProdMCP Logo" class="project-card__logo">
+        </div>
+        <h2 class="project-card__title">ProdMCP</h2>
+        <p class="project-card__tagline">
+          Unified production framework for REST APIs and MCP servers. Schema-driven development, 
+          validation, security, middleware, and auto-generated specs.
+        </p>
+        <code class="project-card__pip">pip install prodmcp</code>
+        <span class="project-card__cta">Explore ProdMCP</span>
+      </a>
       <a href="/docs/openmcp-spec/" class="project-card project-card--openmcp" id="card-openmcp">
         <div class="project-card__logo-wrapper">
           <img src="/images/openmcp-logo.png" alt="OpenMCP Logo" class="project-card__logo">
@@ -31,21 +43,11 @@ type: "landing"
         </div>
         <h2 class="project-card__title">MCPcrunch</h2>
         <p class="project-card__tagline">
-          Security &amp; structural validation for OpenMCP specs. 
-          42Crunch-style scoring with deterministic and LLM-powered auditing.
+          Security auditing &amp; conformance testing for OpenMCP specs. 
+          42Crunch-style scoring with deterministic and LLM-powered analysis.
         </p>
+        <code class="project-card__pip">pip install mcpcrunch</code>
         <span class="project-card__cta">Explore MCPcrunch</span>
-      </a>
-      <a href="/docs/prodmcp/" class="project-card project-card--prodmcp" id="card-prodmcp">
-        <div class="project-card__logo-wrapper">
-          <img src="/images/prodmcp-logo.png" alt="ProdMCP Logo" class="project-card__logo">
-        </div>
-        <h2 class="project-card__title">ProdMCP</h2>
-        <p class="project-card__tagline">
-          FastAPI-like production framework for MCP servers. Schema-driven development, 
-          validation, security, middleware, and auto-generated specs.
-        </p>
-        <span class="project-card__cta">Explore ProdMCP</span>
       </a>
       <a href="/docs/tutorials/" class="project-card project-card--tutorials" id="card-tutorials">
         <div class="project-card__logo-wrapper">

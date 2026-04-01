@@ -8,9 +8,15 @@ description: >
 
 <div align="center">
   <img src="/images/prodmcp-logo.png" alt="ProdMCP Logo" width="150">
+  <br>
+  <a href="https://pypi.org/project/prodmcp/"><img src="https://img.shields.io/pypi/v/prodmcp?color=blue&label=PyPI" alt="PyPI"></a>
+  <a href="https://github.com/ProdMCP/ProdMCP"><img src="https://img.shields.io/badge/license-MIT-green" alt="License"></a>
+  <img src="https://img.shields.io/badge/python-3.10%2B-blue" alt="Python">
 </div>
 
 ProdMCP is a **unified framework** that brings FastAPI-level developer experience to MCP (Model Context Protocol) servers. Build production-grade MCP servers with schema-first validation, security layers, middleware, and automatic OpenMCP specification generation.
+
+📦 **Install:** `pip install prodmcp` · [View on PyPI →](https://pypi.org/project/prodmcp/) · [Source on GitHub →](https://github.com/ProdMCP/ProdMCP)
 
 ## What You'll Find Here
 

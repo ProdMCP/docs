@@ -14,6 +14,10 @@ title = "ProdMCP-org"
     weight = 10
     url = "/docs/"
   [[menu.main]]
+    name = "ProdMCP"
+    weight = 15
+    url = "/docs/prodmcp/"
+  [[menu.main]]
     name = "OpenMCP Spec"
     weight = 20
     url = "/docs/openmcp-spec/"
@@ -21,10 +25,6 @@ title = "ProdMCP-org"
     name = "MCPcrunch"
     weight = 30
     url = "/docs/mcpcrunch/"
-  [[menu.main]]
-    name = "ProdMCP"
-    weight = 40
-    url = "/docs/prodmcp/"
   [[menu.main]]
     name = "Tutorials"
     weight = 45
