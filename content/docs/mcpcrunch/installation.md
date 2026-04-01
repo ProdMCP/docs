@@ -14,6 +14,8 @@ description: >
 pip install mcpcrunch
 ```
 
+📦 [View `mcpcrunch` on PyPI →](https://pypi.org/project/mcpcrunch/)
+
 ### From Source
 
 ```bash
@@ -73,7 +75,25 @@ MCPcrunch produces a rich terminal report:
 └─────────────┴──────────┴────────────────────────────────────┘
 ```
 
+### Conformance Testing (CLI)
+
+Run conformance tests to validate spec integrity and runtime behavior:
+
+```bash
+# Static conformance tests (no server needed)
+mcpcrunch conformance spec.json --schema schema.json --static-only
+
+# Full suite against a live server
+mcpcrunch conformance spec.json \
+  --server-url https://api.example.com/mcp \
+  --bearer-token $MCP_TOKEN
+
+# Export JSON report
+mcpcrunch conformance spec.json --schema schema.json --static-only --output report.json
+```
+
 ## Next Steps
 
-- See all [Validation Rules](../validation-rules/) for the complete rule catalog
+- See all [Validation Rules](../validation-rules/) for the complete security audit rule catalog
+- See [Conformance Testing](../conformance-testing/) for the full 40-test conformance suite
 - Use the [Python API](../python-api/) for programmatic integration

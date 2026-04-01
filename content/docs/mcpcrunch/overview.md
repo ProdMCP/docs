@@ -22,6 +22,8 @@ MCP servers are increasingly used in autonomous agentic environments where AI ag
 
 > MCPcrunch is to OpenMCP what 42Crunch is to OpenAPI.
 
+📦 **Install:** `pip install mcpcrunch` · [PyPI →](https://pypi.org/project/mcpcrunch/) · [GitHub →](https://github.com/ProdMCP/MCPcrunch)
+
 ### Two-Layer Validation
 
 | Layer | Type | What It Catches |
@@ -80,3 +82,17 @@ report = crunch.audit(spec)
 
 print(f"Security Score: {report.overall_score}/100")
 ```
+
+## Beyond Auditing: Conformance Testing
+
+MCPcrunch also includes a complete **Conformance Testing Engine** — 40 tests across 10 categories that validate whether a running MCP server actually implements the contract defined in its spec.
+
+```bash
+# Static conformance (no server needed)
+mcpcrunch conformance spec.json --schema schema.json --static-only
+
+# Full suite against a live server
+mcpcrunch conformance spec.json --server-url http://localhost:3000 --bearer-token $TOKEN
+```
+
+→ See [Conformance Testing](../conformance-testing/) for the full test catalog, scoring, and CI/CD integration.

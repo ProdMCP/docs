@@ -6,6 +6,8 @@ description: >
   Integrate MCPcrunch validation directly into your Python applications and CI/CD pipelines.
 ---
 
+📦 `pip install mcpcrunch` · [PyPI →](https://pypi.org/project/mcpcrunch/) · [GitHub →](https://github.com/ProdMCP/MCPcrunch)
+
 ## Quick Start
 
 ```python
@@ -112,3 +114,37 @@ else:
 |----------|-------|----------|
 | **Gemini** | `GeminiProvider` | `GEMINI_API_KEY` |
 | **OpenAI** | `OpenAIProvider` | `OPENAI_API_KEY` |
+
+## ConformanceRunner API
+
+For conformance testing, use `ConformanceRunner`:
+
+```python
+from mcpcrunch import ConformanceRunner
+from mcpcrunch.conformance.models import AuthConfig, TestCategory
+
+# Static-only (no server needed)
+runner = ConformanceRunner(
+    spec_path="spec.json",
+    schema_path="schema.json"
+)
+report = runner.run_static()
+
+print(f"Score: {report.summary.score}/100")
+print(f"Grade: {report.summary.grade}")
+print(f"Passed: {report.summary.passed}/{report.summary.total_tests}")
+
+# Full suite with live server
+runner = ConformanceRunner(
+    spec_path="spec.json",
+    schema_path="schema.json",
+    server_url="http://localhost:3000",
+    auth=AuthConfig(bearer_token="my-token"),
+)
+report = runner.run_all()
+
+# Run a single category
+report = runner.run_category(TestCategory.SECURITY)
+```
+
+→ See [Conformance Testing](../conformance-testing/) for the full test catalog and scoring details.

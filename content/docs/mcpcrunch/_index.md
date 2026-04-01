@@ -8,9 +8,15 @@ description: >
 
 <div align="center">
   <img src="/images/mcpcrunch-logo.png" alt="MCPcrunch Logo" width="120">
+  <br>
+  <a href="https://pypi.org/project/mcpcrunch/"><img src="https://img.shields.io/pypi/v/mcpcrunch?color=blue&label=PyPI" alt="PyPI"></a>
+  <a href="https://github.com/ProdMCP/MCPcrunch"><img src="https://img.shields.io/badge/license-MIT-green" alt="License"></a>
+  <img src="https://img.shields.io/badge/python-3.10%2B-blue" alt="Python">
 </div>
 
-**MCPcrunch** is a comprehensive security and structural validation framework for the OpenMCP Specification. Inspired by the philosophy of [42Crunch](https://42crunch.com/) for OpenAPI, MCPcrunch applies both deterministic (static analysis) and semantic (LLM-based) validation rules to ensure your MCP specifications are robust, secure, and ready for autonomous agentic environments.
+**MCPcrunch** is a comprehensive security auditing and conformance testing framework for the OpenMCP Specification. Inspired by the philosophy of [42Crunch](https://42crunch.com/) for OpenAPI, MCPcrunch applies both deterministic (static analysis) and semantic (LLM-based) validation rules to ensure your MCP specifications are robust, secure, and ready for autonomous agentic environments.
+
+📦 **Install:** `pip install mcpcrunch` · [View on PyPI →](https://pypi.org/project/mcpcrunch/) · [Source on GitHub →](https://github.com/ProdMCP/MCPcrunch)
 
 ### Example: Direct Export & Audit (The "Forward" Path)
 
@@ -43,17 +49,19 @@ By combining **ProdMCP**'s strict runtime validation with **MCPcrunch**'s deep s
 
 ## Key Features
 
-- 🔍 **Deterministic Auditing** — 20+ rules covering Format (FMT), Data Quality (DAT), and Security (SEC)
+- 🔍 **Security Audit** — 22 deterministic rules covering Format (FMT), Data Quality (DAT), and Security (SEC)
+- 🧪 **Conformance Testing** — 40 tests across 10 categories validating spec integrity and runtime behavior
 - 🤖 **Semantic Risk Analysis** — LLM-powered (Gemini/OpenAI) detection of adversarial threats
-- 📊 **42Crunch-Style Scoring** — Instant security score (0–100) based on severity-weighted issues
+- 📊 **42Crunch-Style Scoring** — Instant security score (0–100) + conformance grade (A–F)
 - 🛠️ **Developer Friendly** — CLI tool or Python API integration
-- 📋 **Rich Reporting** — Beautiful terminal output with summary tables
+- 📋 **Rich Reporting** — Beautiful terminal output with summary tables and JSON export
 
 ## In This Section
 
 - [**Overview**](overview/) — What is MCPcrunch and how it works
 - [**Installation**](installation/) — Install and use the CLI
-- [**Validation Rules**](validation-rules/) — All 20+ deterministic and semantic rules
+- [**Validation Rules**](validation-rules/) — All 22 deterministic and semantic audit rules
+- [**Conformance Testing**](conformance-testing/) — 40 conformance tests across 10 categories
 - [**Python API**](python-api/) — Integrate MCPcrunch into your Python workflows
 - [**Examples**](examples/) — Hands-on examples including ProdMCP integration
 
