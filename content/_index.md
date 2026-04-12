@@ -9,6 +9,7 @@ type: "landing"
   <div class="hero-content">
     <span class="hero-badge">Open Source MCP Ecosystem</span>
     <h1 class="hero-title">Build <span class="highlight">Production-Grade</span> MCP Servers</h1>
+    <p class="hero-first-ever"><strong><span class="highlight">The 1<sup>st</sup> ever</span> security auditing &amp; conformance scanning for MCP.</strong></p>
     <p class="hero-subtitle">
       A complete open-source ecosystem for the Model Context Protocol — 
       from specification to validation to framework. Ship MCP servers with confidence.

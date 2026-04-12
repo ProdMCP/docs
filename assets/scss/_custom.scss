@@ -136,12 +136,27 @@
 }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  font-size: clamp(1.1rem, 2.8vw, 1.5rem);
   color: var(--color-text-secondary);
   max-width: 700px;
   margin: 0 auto 3.5rem;
   line-height: 1.7;
   animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.hero-first-ever {
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  color: var(--color-accent-light);
+  margin: 0 auto 1rem;
+  letter-spacing: -0.01em;
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.hero-first-ever .highlight {
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* --- Project Cards Grid --- */
@@ -185,9 +200,9 @@
   transition: var(--transition-smooth);
 }
 
-.project-card--openmcp::before { background: var(--gradient-card-openmcp); }
+.project-card--openmcp::before { background: var(--gradient-card-mcpcrunch); }
 .project-card--mcpcrunch::before { background: var(--gradient-card-mcpcrunch); }
-.project-card--prodmcp::before { background: var(--gradient-card-prodmcp); }
+.project-card--prodmcp::before { background: var(--gradient-card-mcpcrunch); }
 .project-card--tutorials::before { background: var(--gradient-card-tutorials); }
 
 .project-card:hover {
@@ -218,14 +233,14 @@
 
 /* Wide logo containers for banner-style logos */
 .project-card--mcpcrunch .project-card__logo-wrapper {
-  width: 180px;
-  height: 52px;
+  width: 100%;
+  height: 100px;
   border-radius: 12px;
 }
 
 .project-card--prodmcp .project-card__logo-wrapper {
   width: 100%;
-  height: 70px;
+  height: 100px;
   border-radius: 12px;
 }
 
@@ -315,9 +330,9 @@
 }
 
 .project-card--prodmcp .project-card__pip {
-  color: #ff7979;
-  background: rgba(235, 77, 75, 0.1);
-  border-color: rgba(235, 77, 75, 0.2);
+  color: var(--color-accent-light);
+  background: rgba(0, 206, 201, 0.1);
+  border-color: rgba(0, 206, 201, 0.2);
 }
 
 .project-card__cta::after {
@@ -329,24 +344,21 @@
   transform: translateX(4px);
 }
 
-/* Per-card hover glow */
-.project-card--openmcp:hover {
-  box-shadow: var(--shadow-card-hover), 0 0 40px rgba(108, 92, 231, 0.15);
-}
-.project-card--openmcp .project-card__cta { color: var(--color-primary-light); }
-
-.project-card--mcpcrunch:hover {
+/* Per-card hover glow — package cards teal, tutorials yellow */
+.project-card--openmcp:hover,
+.project-card--mcpcrunch:hover,
+.project-card--prodmcp:hover {
   box-shadow: var(--shadow-card-hover), 0 0 40px rgba(0, 206, 201, 0.15);
 }
-
-.project-card--prodmcp:hover {
-  box-shadow: var(--shadow-card-hover), 0 0 40px rgba(235, 77, 75, 0.15);
-}
-.project-card--prodmcp .project-card__cta { color: #ff7979; }
 
 .project-card--tutorials:hover {
   box-shadow: var(--shadow-card-hover), 0 0 40px rgba(240, 147, 43, 0.15);
 }
+
+.project-card--openmcp .project-card__cta,
+.project-card--mcpcrunch .project-card__cta,
+.project-card--prodmcp .project-card__cta { color: var(--color-accent-light); }
+
 .project-card--tutorials .project-card__cta { color: #f9ca24; }
 
 /* --- Features Strip --- */
