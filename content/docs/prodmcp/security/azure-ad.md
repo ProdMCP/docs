@@ -182,6 +182,4 @@ ProdMCP v0.3.10 fixed a critical bug where MCP tool calls (via the MCP protocol)
 def secure_tool(ctx: AzureADTokenContext = Depends(auth.require_context)) -> dict:
     return ctx.user_info
 ```
-{{< callout type="info" >}}
-No code changes needed — both transports are automatically secured as of v0.3.10.
-{{< /callout >}}
+> **Note:** No code changes needed — both transports are automatically secured as of v0.3.10.
