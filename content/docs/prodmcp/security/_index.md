@@ -30,3 +30,7 @@ When a handler with security requirements is triggered:
 ### Next Steps
 
 Check out the detailed guides for [Bearer Auth](./bearer-auth) and [API Key Auth](./api-key-auth) to start securing your Unified Server.
+
+For enterprise deployments, see the [Azure AD / Entra ID](./azure-ad) integration guide for plug-and-play Microsoft identity support, including role enforcement and On-Behalf-Of token exchange.
+
+> **v0.3.10+**: Security is now enforced identically for both REST routes **and** MCP protocol tool calls — no extra configuration needed.

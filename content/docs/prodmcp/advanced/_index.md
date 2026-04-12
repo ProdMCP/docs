@@ -19,3 +19,6 @@ Deep dive into how ProdMCP communicates over `stdio` and `sse` (Server-Sent Even
 
 ### FastAPI Bridge
 Instantly turn your MCP server into a standard REST API with auto-generated documentation.
+
+### Google ADK Integration
+Run ProdMCP as an MCP backend for Google Agent Development Kit agents, with full Azure AD authentication and compatibility notes for v0.3.10–v0.3.12.
