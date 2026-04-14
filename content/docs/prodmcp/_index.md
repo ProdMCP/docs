@@ -34,8 +34,9 @@ ProdMCP integrates seamlessly with the rest of our open-source tools:
 - 🛡️ **[MCPcrunch](https://github.com/ProdMCP/MCPcrunch/wiki)** — The **1st package** to support security validation and conformance scanning for MCP. Apply deterministic rules and LLM-powered auditing to your generated specs. Learn more in the [MCPcrunch GitHub Wiki](https://github.com/ProdMCP/MCPcrunch/wiki).
 
 
-## What's new in v0.3.11–v0.3.12
+## What's new in v0.5.0
 
-- 🔐 **Azure AD / Entra ID integration** — `prodmcp.integrations.azure` — plug-and-play JWT validation, role enforcement, and On-Behalf-Of token exchange ([docs →](./security/azure-ad))
-- 🤖 **Google ADK compatibility** — full MCP tool security now works over the MCP protocol, not just REST ([docs →](./advanced/adk-integration))
-- 🐛 **Bug fix** — `PydanticSchemaGenerationError` crash when using `Depends(auth.require_context)` with ADK tools resolved in v0.3.12
+- 📝 **Auto `output_description` from model docstrings** — Pydantic model docstrings are now automatically propagated to both OpenAPI `responses.200.description` and OpenMCP `output_description` — zero extra code required
+- 🔁 **Return-annotation `output_schema` fallback** — decorators now infer `output_schema` from the function's return type annotation (`-> MyModel`); no need to repeat `output_schema=MyModel` in the decorator
+- 🔒 **Security spec hardening** — global `security` field injected into specs, `401`/`403` responses added to secured operations, OAuth2 / apiKey definitions added to `components.securitySchemes`, and AzureAD now emits a full OAuth2 `authorizationCode` flow
+- ✂️ **v0.4.0** — removed deprecated `app.as_fastapi()` alias; use `app.test_mcp_as_fastapi()` exclusively

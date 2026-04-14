@@ -49,7 +49,7 @@ By combining **ProdMCP**'s strict runtime validation with **MCPcrunch**'s deep s
 
 ## Key Features
 
-- 🔍 **Security Audit** — 22 deterministic rules covering Format (FMT), Data Quality (DAT), and Security (SEC)
+- 🔍 **Security Audit** — 24 deterministic rules covering Format (FMT), Data Quality (DAT), Security (SEC), and Documentation (DOC)
 - 🧪 **Conformance Testing** — 40 tests across 10 categories validating spec integrity and runtime behavior
 - 🤖 **Semantic Risk Analysis** — LLM-powered (Gemini/OpenAI) detection of adversarial threats
 - 📊 **42Crunch-Style Scoring** — Instant security score (0–100) + conformance grade (A–F)
@@ -64,4 +64,12 @@ By combining **ProdMCP**'s strict runtime validation with **MCPcrunch**'s deep s
 - [**Conformance Testing**](conformance-testing/) — 40 conformance tests across 10 categories
 - [**Python API**](python-api/) — Integrate MCPcrunch into your Python workflows
 - [**Examples**](examples/) — Hands-on examples including ProdMCP integration
+
+## What's new in v0.3.0
+
+- 📊 **Partitioned scoring** — Security pool (/30) + Data Validation pool (/70) reported separately in CLI and Python API (`security_score`, `validation_score`)
+- 🔬 **Per-capability breakdown** — Every tool, prompt, and resource now gets its own score table in the CLI output (`CapabilityScore` in the Python API)
+- 📋 **Two new Documentation rules** — `OMCP-DOC-001` (missing `description`) and `OMCP-DOC-002` (missing `output_description`) penalise undocumented capabilities
+- 🔒 **`OMCP-SEC-012`** — now flags OpenAPI operations with no per-operation `security` field when a global requirement is also absent
+- 🧪 **288 tests** passing (up from 236)
 
