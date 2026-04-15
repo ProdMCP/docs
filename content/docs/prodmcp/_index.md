@@ -31,7 +31,7 @@ ProdMCP is a **unified framework** that brings FastAPI-level developer experienc
 ProdMCP integrates seamlessly with the rest of our open-source tools:
 - 🚀 **Unified API MCP Development** — Build once with ProdMCP, and securely expose your endpoints as both REST APIs and MCP servers out of the box.
 - 📜 **[OpenMCP Specification](https://github.com/ProdMCP/OpenMCP-spec)** — ProdMCP automatically generates an OpenMCP specification for your server, treating MCP definitions with the same rigor as OpenAPI.
-- 🛡️ **[MCPcrunch](https://github.com/ProdMCP/MCPcrunch/wiki)** — The **1st package** to support security validation and conformance scanning for MCP. Apply deterministic rules and LLM-powered auditing to your generated specs. Learn more in the [MCPcrunch GitHub Wiki](https://github.com/ProdMCP/MCPcrunch/wiki).
+- 🛡️ **[MCPcrunch](https://github.com/ProdMCP/MCPcrunch/wiki)** — The **1<span>st</span> package** to support security validation and conformance scanning for MCP. Apply deterministic rules and LLM-powered auditing to your generated specs. Learn more in the [MCPcrunch GitHub Wiki](https://github.com/ProdMCP/MCPcrunch/wiki).
 
 
 ## What's new in v0.5.0
